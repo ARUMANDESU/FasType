@@ -1,0 +1,14 @@
+body{
+    background-color: #0ccb7e;
+}
+.block{
+    margin-left: 250px;
+    margin-right: 250px;
+}
+.about{
+    font-family: "Open Sans";
+    font-size: 30px;
+}
+.Text{
+    font-size: 40px;
+}
