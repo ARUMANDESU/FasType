@@ -1,14 +1,47 @@
 body{
-    background-color: #0ccb7e;
+    margin: 0px;
+    font-family: "Inconsolata";
 }
-.block{
-    margin-left: 250px;
-    margin-right: 250px;
+
+nav{
+    background-color: #264653;
+    width: 1920px;
+    height: 59px;
+}
+header{
+    width: 1920px;
+    height: 1021px;
+    background-color: #2A9D8F;
 }
 .about{
-    font-family: "Open Sans";
-    font-size: 30px;
+    flex-flow: nowrap;
+    margin-left: 205px;
 }
-.Text{
-    font-size: 40px;
+.aboutText{
+    margin: 0px;
+    font-size: 70px;
+    width: 759px;
+    height: 297px;
+    padding-top: 250px;
+}
+.aboutButton{
+    width: 276px;
+    height: 93px;
+    background-color: #264653;
+    border-radius: 67px;
+    font-size: 50px;
+}
+.aboutImg{
+    width: 612px;
+    height: 612px;
+}
+
+.mainSection{
+    background-color: #264653;
+    width: 1920px;
+    height: 2083px;
+}
+
+.sectionBorder{
+    margin-left: 438px;
 }
