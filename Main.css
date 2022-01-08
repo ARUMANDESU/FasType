@@ -1,6 +1,8 @@
 body{
     margin: 0px;
     font-family: "Inconsolata";
+    font-size: 30px;
+    color: #ffffff;
 }
 
 nav{
@@ -32,8 +34,12 @@ header{
     font-size: 50px;
 }
 .aboutImg{
+    position: absolute;
     width: 612px;
     height: 612px;
+    left: 1103px;
+    top: 234px;
+    border-radius: 68px;
 }
 
 .mainSection{
@@ -44,4 +50,84 @@ header{
 
 .sectionBorder{
     margin-left: 438px;
+    margin-right: 438px;
+    padding-top: 103px;
+}
+
+.block{
+    background-color:#2A9D8F ;
+    width: 1044px;
+    height: 560px;
+    margin-bottom: 103px;
+    border-radius: 20px;
+}
+.instructionText{
+    font-family: Inconsolata;
+    font-size: 35px;
+    width: 358px;
+    height: 453px;
+    margin-right: 110px;
+    margin-left: 49px;
+    padding-top: 50px;
+
+}
+.instructionImg{
+    float: right;
+    margin-top: 100px;
+    margin-right: 20px;
+}
+.instructionButton{
+    width: 165px;
+    height: 72px;
+    background-color: #264653;
+    border-radius: 67px;
+    font-size: 38px;
+}
+.changibleText{
+    margin-left: 106px;
+    margin-right: 106px;
+    padding-top: 51px;
+    padding-bottom: 51px;
+    text-align: left;
+}
+.stats{
+    width: 1045px;
+    height: 55px;
+    margin-top: -79px;
+    margin-bottom: 24px;
+    display:flex;
+}
+.statsButton{
+    width: 165px;
+    height: 55px;
+    background-color: #2A9D8F;
+    border-radius: 67px;
+    font-size: 38px;
+    margin-right: 20px;
+}
+.statsInformation{
+    position: absolute;
+    width: 776px;
+    height: 55px;
+    background: #2A9D8F;
+    border-radius: 27.5px;
+    margin-left: 260px;
+}
+.statsInformation{
+    display: flex;
+}
+
+.statsInformationText{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    display: flex;
+
+}
+
+footer{
+    background-color: #2A9D8F;
+    position: absolute;
+    width: 1920px;
+    height: 52px;
 }
