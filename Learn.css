@@ -1,19 +1,8 @@
 body{
     margin: 0px;
-    font-family: "Inconsolata";
+    font-family: Inconsolata;
     font-size: 30px;
     color: #ffffff;
-}
-
-nav{
-    background-color: #264653;
-    width: 1920px;
-    height: 59px;
-}
-header{
-    width: 1920px;
-    height: 1021px;
-    background-color: #2A9D8F;
 }
 
 .mainSection{
