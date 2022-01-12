@@ -1,58 +1,89 @@
-<!doctype HTML>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="Main.css">
     <title>TypeRace</title>
 </head>
 <body>
-    <nav>
-
-    </nav>
-    <header>
-        <div class="about">
-            <p class="aboutText">This site name TypeRace help you to increase your typing skills.</p>
-            <img class="aboutImg" src="image/HeaderImg.jpg"><br>
-            <button class="aboutButton">Start</button>
+    <header style="background-color: #2A9D8F">
+        <div class="sectionBorder">
+            <nav>
+                <a href="Main.html">
+                    <img src="image/HeaderImg.png" width="45" height="45">
+                </a>
+                <div>
+                    <a class="navMenu" href="#start">Train</a>
+                    <a class="navMenu" href="Learn.html">Learn</a>
+                    <a class="navMenu" href="">.....</a>
+                    <a class="navMenu" href="">.....</a>
+                </div>
+            </nav>
         </div>
     </header>
-    <section class="mainSection">
-        <div class="sectionBorder">
-            <div class="block">
-                <div class="instructionImg">
-                    <img  src="image/typingKeyboard.png" width="600" height="360">
-                </div>
-                <div class="instructionText">
-                    <h1>How to Type?</h1>
-                    <p> You do not know how to blind type? <br> Then press the button</p>
-                    <button class="instructionButton">Learn</button>
-                </div>
-            </div>
-            <div class="block">
-                <div class="changibleText">
-                    <p>
-                        *TEXT what you need to type . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  *
-                    </p>
-                </div>
-            </div>
-            <div class="stats">
-                <button class="statsButton">Start</button>
-                <div class="statsInformation">
-                    <a class="statsInformationText"> Speed : * </a>
-                    <a class="statsInformationText"> Time : *</a>
-                    <a class="statsInformationText"> Progress : * </a>
-                </div>
-            </div>
-            <div class="block">
 
+    <section class="introductionContent">
+        <div class="sectionBorder">
+            <div class="headerInformation">
+                <div>
+                    <p class="headerText">This web site will help you to increase your typing skills.</p>
+                    <form action="#start">
+                        <button class="headerButton">Start</button>
+                    </form>
+                </div>
+                <img class="headerImg" src="image/HeaderImg.png">
             </div>
         </div>
     </section>
-    <footer>
 
+    <section class="mainContent">
+        <div class="sectionBorder" style="padding-top:107px;">
+            <div class="block">
+                <div>
+                    <p class="instructionText">This web site will help you to increase your typing skills.</p>
+                    <form action="Learn.html">
+                        <button class="instructionButton">Learn</button>
+                    </form>
+                </div>
+                <img class="instructionImg" src="image/keyboard.png">
+            </div>
+
+
+            <div class="stats">
+                <a name="start"></a>
+                <button class="statsButton">Start</button>
+                <div class="statsInformation">
+                    <p class="statsInformationText"> Speed : * </p>
+                    <p class="statsInformationText"> Time : *</p>
+                    <p class="statsInformationText"> Progress : * </p>
+                </div>
+            </div>
+
+            <div class="block">
+
+                <div  class="changableText">
+                    <p>
+                        *TEXT what you need to type . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  *
+                    </p>
+                    <input class="inputText" type="text"  placeholder="Type Here">
+                </div>
+            </div>
+
+
+            <div class="block">
+                <div  class="changableText">
+                    <p>
+                        *Your Progress*
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        
     </footer>
 
 </body>

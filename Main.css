@@ -1,101 +1,150 @@
 body{
     margin: 0px;
-    font-family: "Inconsolata";
+    font-family: Inconsolata;
+    font-style: normal;
+    font-weight: normal;
     font-size: 30px;
     color: #ffffff;
+}
+p{
+    margin: 0;
 }
 
 nav{
     background-color: #264653;
-    width: 1920px;
-    height: 59px;
-}
-header{
-    width: 1920px;
-    height: 1021px;
-    background-color: #2A9D8F;
-}
-.about{
-    flex-flow: nowrap;
-    margin-left: 205px;
-}
-.aboutText{
-    margin: 0px;
-    font-size: 70px;
-    width: 759px;
-    height: 297px;
-    padding-top: 250px;
-}
-.aboutButton{
-    width: 276px;
-    height: 93px;
-    background-color: #264653;
-    border-radius: 67px;
-    font-size: 50px;
-}
-.aboutImg{
-    position: absolute;
-    width: 612px;
-    height: 612px;
-    left: 1103px;
-    top: 234px;
-    border-radius: 68px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    padding-top: 7px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+
+    display: flex;
 }
 
-.mainSection{
-    background-color: #264653;
-    width: 1920px;
-    height: 2083px;
+nav div{
+    padding-top: 15px;
+}
+
+.navMenu{
+    text-decoration: none;
+    color: white;
+    margin-left: 150px;
+}
+
+.navMenu:hover{
+    color: #2A9D8F;
+    margin-top: 1px;
 }
 
 .sectionBorder{
-    margin-left: 438px;
-    margin-right: 438px;
-    padding-top: 103px;
+    margin-left: 330px;
+    margin-right: 330px;
+}
+.introductionContent{
+    background-color: #2A9D8F;
+    padding-bottom: 170px;
+}
+
+.headerInformation{
+    padding-top: 275px;
+    display: flex;
+}
+
+.headerText{
+    margin: 0;
+    width: 607px;
+    height: 297px;
+    font-size: 70px;
+    line-height: 73px;
+    margin-right: 190px;
+    margin-bottom: 27px;
+}
+.headerImg{
+    width: 407px;
+    height: 407px;
+    border-radius: 65px;
+}
+.headerButton{
+    width: 276px;
+    height: 93px;
+    background: #264653;
+    border-radius: 67px;
+
+    font-size: 60px;
+    line-height: 63px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.headerButton:hover{
+    color: #2A9D8F;
+}
+
+.mainContent{
+    background-color: #264653;
+    padding-bottom: 50px;
 }
 
 .block{
-    background-color:#2A9D8F ;
-    width: 1044px;
-    height: 560px;
-    margin-bottom: 103px;
-    border-radius: 20px;
+    height: 355px;
+    background-color: #2A9D8F;
+    display: flex;
+    padding-top: 104px;
+    padding-bottom: 104px;
+    padding-right: 70px;
+    padding-left: 70px;
+    margin-top: 50px;
+    border-radius: 45px;
 }
-.instructionText{
-    font-family: Inconsolata;
-    font-size: 35px;
-    width: 358px;
-    height: 453px;
-    margin-right: 110px;
-    margin-left: 49px;
-    padding-top: 50px;
 
+
+.instructionText{
+    margin: 0;
+    width: 258px;
+    height: 253px;
+    font-size: 40px;
+    line-height: 42px;
+    margin-right: 61px;
+    margin-bottom: 14px;
+}
+
+.instructionButton{
+    width: 191px;
+    height: 68px;
+    background: #264653;
+    border-radius: 34px;
+
+    font-size: 40px;
+    line-height: 42px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.instructionButton:hover{
+    color: #2A9D8F;
 }
 .instructionImg{
-    float: right;
-    margin-top: 100px;
-    margin-right: 20px;
+    width: 662px;
+    height: 351px;
 }
-.instructionButton{
-    width: 165px;
-    height: 72px;
-    background-color: #264653;
-    border-radius: 67px;
-    font-size: 38px;
-}
-.changibleText{
-    margin-left: 106px;
-    margin-right: 106px;
-    padding-top: 51px;
-    padding-bottom: 51px;
+
+.changableText{
     text-align: left;
 }
+
+.inputText{
+    height: 50px;
+    width: 1027px;
+    font-size: 30px;
+    margin-top: 25px;
+    background-color: #264653;
+    color: white;
+}
 .stats{
-    width: 1045px;
     height: 55px;
-    margin-top: -79px;
-    margin-bottom: 24px;
     display:flex;
+    margin-top: 50px;
 }
 .statsButton{
     width: 165px;
@@ -104,17 +153,19 @@ header{
     border-radius: 67px;
     font-size: 38px;
     margin-right: 20px;
+    color: white;
+}
+
+.statsButton:hover{
+    color: #264653;
 }
 .statsInformation{
-    position: absolute;
+    display: flex;
     width: 776px;
     height: 55px;
     background: #2A9D8F;
     border-radius: 27.5px;
     margin-left: 260px;
-}
-.statsInformation{
-    display: flex;
 }
 
 .statsInformationText{
@@ -122,12 +173,9 @@ header{
     margin-right: 50px;
     margin-top: 10px;
     display: flex;
-
 }
-
 footer{
     background-color: #2A9D8F;
-    position: absolute;
-    width: 1920px;
     height: 52px;
 }
+
