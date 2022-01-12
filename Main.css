@@ -6,6 +6,9 @@ body{
     font-size: 30px;
     color: #ffffff;
 }
+p{
+    margin: 0;
+}
 
 nav{
     background-color: #264653;
@@ -30,6 +33,11 @@ nav div{
     margin-left: 150px;
 }
 
+.navMenu:hover{
+    color: #2A9D8F;
+    margin-top: 1px;
+}
+
 .sectionBorder{
     margin-left: 330px;
     margin-right: 330px;
@@ -50,7 +58,7 @@ nav div{
     height: 297px;
     font-size: 70px;
     line-height: 73px;
-    margin-right: 107px;
+    margin-right: 190px;
     margin-bottom: 27px;
 }
 .headerImg{
@@ -68,6 +76,9 @@ nav div{
     line-height: 63px;
     text-align: center;
     color: #FFFFFF;
+}
+.headerButton:hover{
+    color: #2A9D8F;
 }
 
 .mainContent{
@@ -109,6 +120,10 @@ nav div{
     text-align: center;
     color: #FFFFFF;
 }
+
+.instructionButton:hover{
+    color: #2A9D8F;
+}
 .instructionImg{
     width: 662px;
     height: 351px;
@@ -116,6 +131,15 @@ nav div{
 
 .changableText{
     text-align: left;
+}
+
+.inputText{
+    height: 50px;
+    width: 1027px;
+    font-size: 30px;
+    margin-top: 25px;
+    background-color: #264653;
+    color: white;
 }
 .stats{
     height: 55px;
@@ -131,6 +155,10 @@ nav div{
     margin-right: 20px;
     color: white;
 }
+
+.statsButton:hover{
+    color: #264653;
+}
 .statsInformation{
     display: flex;
     width: 776px;
@@ -145,7 +173,6 @@ nav div{
     margin-right: 50px;
     margin-top: 10px;
     display: flex;
-
 }
 footer{
     background-color: #2A9D8F;
