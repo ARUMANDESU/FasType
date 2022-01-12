@@ -4,14 +4,35 @@ body{
     font-size: 30px;
     color: #ffffff;
 }
+nav{
+    background-color: #2a9d8f;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    padding-top: 7px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+
+    display: flex;
+}
+nav div{
+    padding-top: 15px;
+}
+
+.navMenu{
+    text-decoration: none;
+    color: white;
+    margin-left: 150px;
+}
 
 .mainSection{
     background-color: #264653;
     padding-bottom:15px;
+    padding-top: 150px;
 }
 
-.sectionBorder{
-    margin-left: 438px;
-    margin-right: 438px;
-    padding-top: 103px;
+.sectionBorder {
+    margin-left: 330px;
+    margin-right: 330px;
 }

@@ -7,11 +7,6 @@ body{
     color: #ffffff;
 }
 
-header{
-    background-color: #2A9D8F;
-    padding-bottom: 150px;
-}
-
 nav{
     background-color: #264653;
     border-bottom-right-radius: 30px;
@@ -39,9 +34,13 @@ nav div{
     margin-left: 330px;
     margin-right: 330px;
 }
+.introductionContent{
+    background-color: #2A9D8F;
+    padding-bottom: 170px;
+}
 
 .headerInformation{
-    margin-top: 275px;
+    padding-top: 275px;
     display: flex;
 }
 
