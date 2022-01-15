@@ -5,6 +5,7 @@ body{
     font-weight: normal;
     font-size: 30px;
     color: #ffffff;
+
 }
 p{
     margin: 0;
@@ -30,7 +31,7 @@ nav div{
 .navMenu{
     text-decoration: none;
     color: white;
-    margin-left: 150px;
+    margin-left: 250px;
 }
 
 .navMenu:hover{
@@ -49,31 +50,20 @@ nav div{
 
 .headerInformation{
     padding-top: 275px;
+    padding-bottom: 275px;
     display: flex;
 }
 
 .headerText{
-    margin: 0;
-    width: 607px;
-    height: 297px;
-    font-size: 70px;
-    line-height: 73px;
-    margin-right: 190px;
-    margin-bottom: 27px;
+    font-size: 3rem;
 }
 .headerImg{
-    width: 407px;
-    height: 407px;
-    border-radius: 65px;
+
+
 }
 .headerButton{
-    width: 276px;
-    height: 93px;
     background: #264653;
     border-radius: 67px;
-
-    font-size: 60px;
-    line-height: 63px;
     text-align: center;
     color: #FFFFFF;
 }
