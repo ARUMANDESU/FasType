@@ -14,7 +14,7 @@
 <body>
     <header style="background-color: #2A9D8F">
             <nav class="navbar navbar-expand-xl px-3 navbar-dark ">
-                <a href="Main.html" class="navbar-brand">
+                <a href="Main.html" class="navbar-brand" style="margin-left: 50px;">
                     <img src="image/HeaderImg.png" style="width: 3rem; height: 3rem;">
                 </a>
                 <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#menu">
@@ -54,76 +54,49 @@
     </div>
 
     <div class="container-fluid p-5" style="background-color:#264653;">
-        <div class="container">
-            <div class="container p-5" style="background-color: #2A9D8F; border-radius:45px;">
-                <p class="instructionText text-left">This web site will help you to increase your typing skills.</p>
-                <a href="Learn.html">
-                    <button class="instructionButton btn btn-lg p-5">Learn</button>
-                </a>
-            </div>
-
-        </div>
-
-        <div class="container">
-            <div class="container" style="background-color: #264653;">
-
+        <div class="container my-5">
+            <div class="container p-5" style="background-color: #2A9D8F; border-radius:45px;display: flex;">
+                <div>
+                    <p class="text-left">This web site will help you to increase your typing skills.</p>
+                    <a href="Learn.html">
+                        <button class="instructionButton btn btn-lg px-5">Learn</button>
+                    </a>
+                </div>
+                <div>
+                    <img class="img-fluid" src="image/keyboard.png">
+                </div>
             </div>
         </div>
 
-        <div class="container">
-            <div class="container" style="background-color: #264653;">
+        <div class="container my-5">
+            <div class="container" style="display: flex; flex-wrap: wrap; justify-content: center;">
+                <a name="start"></a>
+                <button class="statsButton btn btn-md mx-5 px-5">Start</button>
+                <div class="row my-2 mx-5 px-3" style="background-color: #2A9D8F; border-radius: 67px;">
+                    <p class="col-lg"> Speed : * </p>
+                    <p class="col-lg"> Time : *</p>
+                    <p class="col-lg"> Progress : * </p>
+                </div>
+            </div>
+        </div>
 
+        <div class="container my-5">
+            <div class="container p-5" style="background-color: #2A9D8F;border-radius: 45px; ">
+                <div  class="changableText text-fluid">
+                    <p>
+                        *TEXT what you need to type . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  *
+                    </p>
+                        <input class="inputText form-control" type="text"  placeholder="Type Here">
+                </div>
             </div>
         </div>
 
     </div>
-    <section class="mainContent">
-        <div class="sectionBorder" style="padding-top:107px;">
-            <div class="block">
-                <div>
-                    <p class="instructionText">This web site will help you to increase your typing skills.</p>
-                    <form action="Learn.html">
-                        <button class="instructionButton">Learn</button>
-                    </form>
-                </div>
-                <img class="instructionImg" src="image/keyboard.png">
-            </div>
+
+    <footer>
 
 
-            <div class="stats">
-                <a name="start"></a>
-                <button class="statsButton">Start</button>
-                <div class="statsInformation">
-                    <p class="statsInformationText"> Speed : * </p>
-                    <p class="statsInformationText"> Time : *</p>
-                    <p class="statsInformationText"> Progress : * </p>
-                </div>
-            </div>
-
-            <div class="block">
-
-                <div  class="changableText">
-                    <p>
-                        *TEXT what you need to type . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  *
-                    </p>
-                    <input class="inputText" type="text"  placeholder="Type Here">
-                </div>
-            </div>
-
-
-            <div class="block">
-                <div  class="changableText">
-                    <p>
-                        *Your Progress*
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!--    <footer>-->
-
-<!--    </footer>-->
+    </footer>
 
 </body>
 </html>

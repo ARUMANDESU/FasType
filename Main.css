@@ -91,17 +91,15 @@ nav div{
 
 .instructionText{
     margin: 0;
-    width: 258px;
-    height: 253px;
-    font-size: 40px;
-    line-height: 42px;
-    margin-right: 61px;
-    margin-bottom: 14px;
+    width: 12rem;
+    height: 12rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
 }
 
 .instructionButton{
-    width: 191px;
-    height: 68px;
     background: #264653;
     border-radius: 34px;
 
@@ -124,28 +122,17 @@ nav div{
 }
 
 .inputText{
-    height: 50px;
-    width: 1027px;
-    font-size: 30px;
     margin-top: 25px;
     background-color: #264653;
     color: white;
 }
-.stats{
-    height: 55px;
-    display:flex;
-    margin-top: 50px;
-}
+
 .statsButton{
-    width: 165px;
-    height: 55px;
     background-color: #2A9D8F;
     border-radius: 67px;
-    font-size: 38px;
-    margin-right: 20px;
     color: white;
-}
 
+}
 .statsButton:hover{
     color: #264653;
 }
@@ -158,14 +145,5 @@ nav div{
     margin-left: 260px;
 }
 
-.statsInformationText{
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 10px;
-    display: flex;
-}
-footer{
-    background-color: #2A9D8F;
-    height: 52px;
-}
+
 
