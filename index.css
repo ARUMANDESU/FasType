@@ -31,7 +31,8 @@ nav div{
 .navMenu{
     text-decoration: none;
     color: white;
-    margin-left: 250px;
+    padding-right: 100px;
+    padding-left: 100px;
 }
 
 .navMenu:hover{
