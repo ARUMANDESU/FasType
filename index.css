@@ -127,7 +127,6 @@ nav div{
     background-color: #264653;
     color: white;
 }
-
 .statsButton{
     background-color: #2A9D8F;
     border-radius: 67px;
@@ -145,6 +144,20 @@ nav div{
     border-radius: 27.5px;
     margin-left: 260px;
 }
+.highlight {background-color: #e76868;}
+.highlightGreen{background-color: #1dde8f;}
 
-
+u{
+    margin: 0;
+    padding: 0;
+    animation-name: example;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes example {
+    from {opacity: 0.5;}
+    to {opacity:1;}
+}
 

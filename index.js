@@ -14,7 +14,7 @@ function numberIncrement(){
 
 
 //random text
-document.getElementById("startBtnToGenText").onclick=function() {chooseRandomText()};
+document.getElementById("startBtnToGenText").onclick=function() {startButton()};
 let someTexts =[
     "aa ss dd ff jj kk ll ;;",
     "as as df df jk jk l; l;",
@@ -29,27 +29,136 @@ let someTexts =[
     'A Stag was chased by the hounds, and took refuge in a cave, where he hoped to be safe from his pursuers. Unfortunately the cave contained a Lion, to whom he fell an easy prey. "Unhappy that I am," he cried, "I am saved from the power of the dogs only to fall into the clutches of a Lion."\n' + 'Out of the frying-pan into the fire.'
 ]
 let textIndex=0;
-function chooseRandomText(){
+function startButton(){
+    //choose random text
     textIndex = Math.round(Math.random()*(someTexts.length-1));
     document.getElementById("randomText").innerHTML= someTexts[textIndex];
+
+    //restart progress, speed and time
+    timer();
+    restartTime();
+    inputText.value="";
+    $("#progress").text('');
+
 }
 function addText(text){
     someTexts.push(text);
 }
-let inputText=document.getElementById("inputTextHere")
-inputText.oninput=function () {checkText()};
 
+// Highlighting text
+let inputText=document.getElementById("inputTextHere")
+inputText.oninput=function () {startTouchTyping()};
+
+
+/*
+First version but not working properly
 function checkText(){
     let firstText = document.getElementById("randomText").innerHTML.split(" ");
     let secondText =inputText.value.split();
-    let fullText={};
+    let fullText=[];
+    document.getElementById("randomText").innerHTML="";
     for(k=0;k<firstText.length-1;k++){
         if(firstText[k]==secondText[k]){
-            fullText.push(firstText," ");
+            fullText.push(firstText+" ");
         }
         else{
-            fullText.push(("<u>"+firstText+"</u>"," "));
+            fullText.push(("<u>"+firstText+"</u>"+" "));
         }
     }
-    document.getElementById("randomText").innerHTML= JSON.stringify(fullText);
+
+
+    document.getElementById("randomText").innerHTML=fullText.toString();
+}*/
+/*let bol=true;
+function highlight(firstText, secondText){
+
+    let lengthPlus=0;
+    let oldText = firstText.text(), text = ''/!*firstText.html().slice(1,secondText.val().length+lengthPlus)*!/;
+    secondText.val().split('').forEach(function(val, i){
+        if (val != oldText.charAt(i)){
+            text += "<span class='highlight'>"+val+"</span>";
+            lengthPlus+=35;
+        }
+        else{
+            text += "<span class='highlightGreen'>"+val+"</span>";
+            lengthPlus+=40;
+        }
+    });
+    let k=text+ firstText.html().slice(secondText.val().length+(bol?0:lengthPlus),firstText.html().length)
+    firstText.html(k);
+    if(bol){
+        bol=false;
+    }
+}*/
+
+function startTouchTyping(){
+    highlight($("#randomText"),$("#inputTextHere"));
+    progress($("#randomText"),$("#inputTextHere"));
+}
+function highlight(firstText, secondText){
+    let oldText = secondText.val(), text = '';
+    firstText.text().split('').forEach(function(val, i){
+        if (val != oldText.charAt(i)){
+            if(oldText.length==i){
+                text += "<u class='highlight'>"+val+"</u>";
+            }
+            else{
+                text += "<span class='highlight'>"+val+"</span>";
+            }
+        }
+        else{
+            if(oldText.length==i){
+                text += "<u class='highlightGreen'>"+val+"</u>";
+            }
+            else{
+                text += "<span class='highlightGreen'>"+val+"</span>";
+            }
+        }
+
+    });
+    firstText.html(text);
+}
+
+//Time
+var h1 = document.getElementById("timer");
+var start = document.getElementById('strt');
+var stop = document.getElementById('stp');
+var reset = document.getElementById('rst');
+var sec = 0;
+var min = 0;
+var t;
+
+function tick(){
+    sec++;
+    if (sec >= 60) {
+        sec = 0;
+        min++;
+    }
+}
+function add() {
+    tick();
+    h1.textContent =(min > 9 ? min : "0" + min) + ":" + (sec > 9 ? sec : "0" + sec);
+    timer();
+}
+function timer() {
+    t = setTimeout(add, 1250);
+}
+
+/*timer();
+start.onclick = timer;
+stop.onclick = function() {
+    clearTimeout(t);
+}*/
+function restartTime() {
+    h1.textContent = "00:00";
+}
+
+
+function progress(firstText,secondText){
+    let value = Math.round((secondText.val().length*100)/firstText.text().length);
+    $("#progress").text(value);
+}
+
+if($("#progress").text()==100){
+    clearTimeout(t);
 }
