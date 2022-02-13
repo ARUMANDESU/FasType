@@ -36,6 +36,7 @@ nav div{
 }
 
 .navMenu:hover{
+    text-decoration: none;
     color: #2A9D8F;
     margin-top: 1px;
 }
@@ -133,8 +134,17 @@ nav div{
     color: white;
 
 }
+
 .statsButton:hover{
     color: #264653;
+}
+.statsButton-diffColor{
+    background-color: #264653;
+    border-radius: 67px;
+    color: white;
+}
+.statsButton-diffColor:hover{
+    color: #0ccb7e;
 }
 .statsInformation{
     display: flex;
@@ -157,6 +167,19 @@ u{
     animation-direction: alternate;
 }
 @keyframes example {
+    from {opacity: 0.5;}
+    to {opacity:1;}
+}
+
+.typing{
+    animation-name: typing;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes typing {
     from {opacity: 0.5;}
     to {opacity:1;}
 }

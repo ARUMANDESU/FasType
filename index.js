@@ -15,6 +15,10 @@ function numberIncrement(){
 
 //random text
 document.getElementById("startBtnToGenText").onclick=function() {startButton()};
+document.getElementById("myOwnTextBtn").onclick=function (){
+    document.getElementById("randomText").innerHTML="<u class='highlight'>"+$("#myOwnText").val().slice(0,1)+"</u>"+"<span class='highlight'>"+$("#myOwnText").val().slice(1,$("#myOwnText").val().length)+"</span>" ;
+    restart();
+};
 let someTexts =[
     "aa ss dd ff jj kk ll ;;",
     "as as df df jk jk l; l;",
@@ -26,20 +30,31 @@ let someTexts =[
     "house trifler mutable turnout propound ligature Marcuse unrecorded vb biddy",
     "therapeutic decapitate impetus meritorious aggregation mistook ship rung transcribe popularize",
     'Two little Frogs were playing about at the edge of a pool when an Ox came down to the water to drink, and by accident trod on one of them and crushed the life out of him. When the old Frog missed him, she asked his brother where he was. "He is dead, mother," said the little Frog; "an enormous big creature with four legs came to our pool this morning and trampled him down in the mud." "Enormous, was he? Was he as big as this?" said the Frog, puffing herself out to look as big as possible. "Oh! yes, much bigger," was the answer. The Frog puffed herself out still more. "Was he as big as this?" said she. "Oh! yes, yes, mother, MUCH bigger," said the little Frog. And yet again she puffed and puffed herself out till she was almost as round as a ball. "As big as...?" she began, but then she burst.',
-    'A Stag was chased by the hounds, and took refuge in a cave, where he hoped to be safe from his pursuers. Unfortunately the cave contained a Lion, to whom he fell an easy prey. "Unhappy that I am," he cried, "I am saved from the power of the dogs only to fall into the clutches of a Lion."\n' + 'Out of the frying-pan into the fire.'
+    'A Stag was chased by the hounds, and took refuge in a cave, where he hoped to be safe from his pursuers. Unfortunately the cave contained a Lion, to whom he fell an easy prey. "Unhappy that I am," he cried, "I am saved from the power of the dogs only to fall into the clutches of a Lion."\n' + 'Out of the frying-pan into the fire.',
+    'I went to the park and saw a tree, it was a big tree and it was very green. I could see a red apple on a high branch so I reached up and picked it off. It was weird how I picked it off, as I am very short. I suppose I just jumped really high.',
+    ''
+
 ]
 let textIndex=0;
 function startButton(){
     //choose random text
     textIndex = Math.round(Math.random()*(someTexts.length-1));
-    document.getElementById("randomText").innerHTML= someTexts[textIndex];
+    document.getElementById("randomText").innerHTML="<u class='highlight'>"+someTexts[textIndex].slice(0,1)+"</u>"+"<span class='highlight'>"+someTexts[textIndex].slice(1,someTexts[textIndex].length)+"</span>" ;
 
     //restart progress, speed and time
-    timer();
-    restartTime();
-    inputText.value="";
-    $("#progress").text('');
+    restart();
 
+}
+
+function restart(){
+    after=true;
+    restartTime();
+    sec = 0;
+    min = 0;
+    inputText.value="";
+    $("#progress").text('0');
+    $("#speed").text('0');
+    inputText.readOnly=false;
 }
 function addText(text){
     someTexts.push(text);
@@ -94,8 +109,24 @@ function highlight(firstText, secondText){
 function startTouchTyping(){
     highlight($("#randomText"),$("#inputTextHere"));
     progress($("#randomText"),$("#inputTextHere"));
+    typingSpeed($("#inputTextHere"));
+    afterInput();
+    if(parseInt($("#progress").text())>99){
+        clearTimeout(t);
+        inputText.readOnly=true; // make it impossible to input
+    }
 }
+
+let after=true;
+function afterInput(){
+    if(after){
+        timer();
+        after=false;
+    }
+}
+let wrongLetter=0;
 function highlight(firstText, secondText){
+
     let oldText = secondText.val(), text = '';
     firstText.text().split('').forEach(function(val, i){
         if (val != oldText.charAt(i)){
@@ -104,6 +135,10 @@ function highlight(firstText, secondText){
             }
             else{
                 text += "<span class='highlight'>"+val+"</span>";
+            }
+
+            if(oldText.length>i){
+                wrongLetter++;
             }
         }
         else{
@@ -115,18 +150,23 @@ function highlight(firstText, secondText){
             }
         }
 
+
     });
     firstText.html(text);
+    wrongLetter=0;
+}
+//
+function typingSpeed(text){
+    let speed = Math.round((text.val().length-wrongLetter)/(min+(sec/60))/6);
+    $("#speed").text(speed);
 }
 
-//Time
-var h1 = document.getElementById("timer");
-var start = document.getElementById('strt');
-var stop = document.getElementById('stp');
-var reset = document.getElementById('rst');
-var sec = 0;
-var min = 0;
-var t;
+
+//Timer found from StackOverFlow then changed something
+let h1 = document.getElementById("timer");
+let sec = 0;
+let min = 0;
+let t;
 
 function tick(){
     sec++;
@@ -143,14 +183,9 @@ function add() {
 function timer() {
     t = setTimeout(add, 1250);
 }
-
-/*timer();
-start.onclick = timer;
-stop.onclick = function() {
-    clearTimeout(t);
-}*/
 function restartTime() {
     h1.textContent = "00:00";
+    clearTimeout(t);
 }
 
 
@@ -159,6 +194,28 @@ function progress(firstText,secondText){
     $("#progress").text(value);
 }
 
-if($("#progress").text()==100){
-    clearTimeout(t);
+
+
+
+/*let index=0;
+function typing(text="",whereToInput){
+    if(index<text.length){
+        document.getElementById(whereToInput).innerHTML+=text.charAt(index);
+        index++;
+        setTimeout(typing,100);
+    }
+}*/
+
+var i = 0;
+var txt = 'This web site will help you to increase your typing skills.'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+    if (i < txt.length) {
+        document.getElementById("headerText").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
 }
+typeWriter();
+
