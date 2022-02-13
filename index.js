@@ -1,23 +1,10 @@
-/*document.getElementById("increaseNumber").onclick = function() {numberIncrement()};
-let b= 0;
-function numberIncrement(){
-    let a = parseInt(document.getElementById("inputNumberHere").value) ;
-    if (Number.isInteger(a)){
-        b+=a;
-        //console.log(typeof (document.getElementById("someBlock").style.marginLeft));
-        document.getElementById("someBlock").style.marginLeft=b+"px";
-    }
-    else{
-        alert("Error: it isn't number");
-    }
-}*/
 
-
-//random text
+//start button pressed
 document.getElementById("startBtnToGenText").onclick=function() {startButton()};
 document.getElementById("myOwnTextBtn").onclick=function (){
     document.getElementById("randomText").innerHTML="<u class='highlight'>"+$("#myOwnText").val().slice(0,1)+"</u>"+"<span class='highlight'>"+$("#myOwnText").val().slice(1,$("#myOwnText").val().length)+"</span>" ;
     restart();
+    inputText.focus();
 };
 let someTexts =[
     "aa ss dd ff jj kk ll ;;",
@@ -43,6 +30,7 @@ function startButton(){
 
     //restart progress, speed and time
     restart();
+    inputText.focus();
 
 }
 
@@ -65,53 +53,12 @@ let inputText=document.getElementById("inputTextHere")
 inputText.oninput=function () {startTouchTyping()};
 
 
-/*
-First version but not working properly
-function checkText(){
-    let firstText = document.getElementById("randomText").innerHTML.split(" ");
-    let secondText =inputText.value.split();
-    let fullText=[];
-    document.getElementById("randomText").innerHTML="";
-    for(k=0;k<firstText.length-1;k++){
-        if(firstText[k]==secondText[k]){
-            fullText.push(firstText+" ");
-        }
-        else{
-            fullText.push(("<u>"+firstText+"</u>"+" "));
-        }
-    }
-
-
-    document.getElementById("randomText").innerHTML=fullText.toString();
-}*/
-/*let bol=true;
-function highlight(firstText, secondText){
-
-    let lengthPlus=0;
-    let oldText = firstText.text(), text = ''/!*firstText.html().slice(1,secondText.val().length+lengthPlus)*!/;
-    secondText.val().split('').forEach(function(val, i){
-        if (val != oldText.charAt(i)){
-            text += "<span class='highlight'>"+val+"</span>";
-            lengthPlus+=35;
-        }
-        else{
-            text += "<span class='highlightGreen'>"+val+"</span>";
-            lengthPlus+=40;
-        }
-    });
-    let k=text+ firstText.html().slice(secondText.val().length+(bol?0:lengthPlus),firstText.html().length)
-    firstText.html(k);
-    if(bol){
-        bol=false;
-    }
-}*/
-
 function startTouchTyping(){
     highlight($("#randomText"),$("#inputTextHere"));
     progress($("#randomText"),$("#inputTextHere"));
     typingSpeed($("#inputTextHere"));
     afterInput();
-    if(parseInt($("#progress").text())>99){
+    if(parseInt($("#progress").text())>=100){
         clearTimeout(t);
         inputText.readOnly=true; // make it impossible to input
     }
@@ -124,6 +71,7 @@ function afterInput(){
         after=false;
     }
 }
+
 let wrongLetter=0;
 function highlight(firstText, secondText){
 
@@ -155,9 +103,10 @@ function highlight(firstText, secondText){
     firstText.html(text);
     wrongLetter=0;
 }
-//
+
+
 function typingSpeed(text){
-    let speed = Math.round((text.val().length-wrongLetter)/(min+(sec/60))/6);
+    let speed = Math.round((text.val().length-wrongLetter)/(min+(sec/60))/4);
     $("#speed").text(speed);
 }
 
@@ -181,34 +130,25 @@ function add() {
     timer();
 }
 function timer() {
-    t = setTimeout(add, 1250);
+    t = setTimeout(add, 1000);
 }
 function restartTime() {
     h1.textContent = "00:00";
     clearTimeout(t);
 }
 
-
+//Typing  progress
 function progress(firstText,secondText){
-    let value = Math.round((secondText.val().length*100)/firstText.text().length);
+    let value = Math.round((secondText.val().length*100)/firstText.text().length)+"%";
     $("#progress").text(value);
 }
 
 
 
-
-/*let index=0;
-function typing(text="",whereToInput){
-    if(index<text.length){
-        document.getElementById(whereToInput).innerHTML+=text.charAt(index);
-        index++;
-        setTimeout(typing,100);
-    }
-}*/
-
+//typing effect
 var i = 0;
 var txt = 'This web site will help you to increase your typing skills.'; /* The text */
-var speed = 50; /* The speed/duration of the effect in milliseconds */
+var speed = 40; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
     if (i < txt.length) {
