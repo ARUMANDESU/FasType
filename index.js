@@ -147,8 +147,8 @@ function progress(firstText,secondText){
 
 //typing effect
 var i = 0;
-var txt = 'This web site will help you to increase your typing skills.'; /* The text */
-var speed = 40; /* The speed/duration of the effect in milliseconds */
+var txt = 'This web site will help you to increase your typing skills.';
+var speed = 30;
 
 function typeWriter() {
     if (i < txt.length) {
@@ -159,3 +159,50 @@ function typeWriter() {
 }
 typeWriter();
 
+
+
+
+//gif  пасхалка :)
+function imgChanger(id="",obychnyi="",neobychnyi=""){
+    document.getElementById(id).onclick=function (){
+        this.src="image/"+neobychnyi;
+        if(this.parentElement.lastElementChild.innerHTML!="↓ ↑ ↑ → ← ← ↓ ↑ →"){ //
+            this.parentElement.appendChild(document.createElement("div"));
+            this.parentElement.lastElementChild.innerHTML="↓ ↑ ↑ → ← ← ↓ ↑ →";
+        }
+
+    };
+    document.getElementById(id).onmouseleave=function (){
+        this.src="image/"+obychnyi;
+        if(this.parentElement.lastElementChild.innerHTML=="↓ ↑ ↑ → ← ← ↓ ↑ →") {
+            this.parentElement.lastElementChild.remove();
+        }
+
+    };
+}
+
+imgChanger("headerImg","HeaderImg.png","420e39bd34d74ffae5c6af92a701d5cb.gif");
+imgChanger("keyboardImg","keyboard.png","200.gif");
+
+// тоже пасхалка ↓ ↑ ↑ → ← ← ↓ ↑ →
+let keyPressed=[];
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+        case 37:
+            keyPressed.push('left');
+            break;
+        case 38:
+            keyPressed.push('up');
+            break;
+        case 39:
+            keyPressed.push('right');
+            break;
+        case 40:
+            keyPressed.push('down');
+            break;
+    }
+
+    if(keyPressed[keyPressed.length-9]=='down'&&keyPressed[keyPressed.length-8]=='up'&&keyPressed[keyPressed.length-7]=='up'&&keyPressed[keyPressed.length-6]=='right'&&keyPressed[keyPressed.length-5]=='left'&&keyPressed[keyPressed.length-4]=='left' && keyPressed[keyPressed.length-3]=='down'&&keyPressed[keyPressed.length-2]=='up'&&keyPressed[keyPressed.length-1]=='right'){
+        window.location.assign("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+    }
+};
