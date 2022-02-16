@@ -195,7 +195,7 @@ document.onkeydown = function(e) {
             keyPressed.push('right');
             break;
         case 40:
-            keyPrssed.push('down');
+            keyPressed.push('down');
             break;
     }
 
