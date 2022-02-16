@@ -171,16 +171,4 @@ u{
     to {opacity:1;}
 }
 
-.typing{
-    animation-name: typing;
-    animation-duration: 500ms;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes typing {
-    from {opacity: 0.5;}
-    to {opacity:1;}
-}
 

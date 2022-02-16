@@ -160,8 +160,6 @@ function typeWriter() {
 typeWriter();
 
 
-
-
 //gif  пасхалка :)
 function imgChanger(id="",obychnyi="",neobychnyi=""){
     document.getElementById(id).onclick=function (){
@@ -177,7 +175,6 @@ function imgChanger(id="",obychnyi="",neobychnyi=""){
         if(this.parentElement.lastElementChild.innerHTML=="↓ ↑ ↑ → ← ← ↓ ↑ →") {
             this.parentElement.lastElementChild.remove();
         }
-
     };
 }
 
@@ -198,7 +195,7 @@ document.onkeydown = function(e) {
             keyPressed.push('right');
             break;
         case 40:
-            keyPressed.push('down');
+            keyPrssed.push('down');
             break;
     }
 
