@@ -166,6 +166,7 @@ typeWriter();
 
 
 let sound1= document.getElementById("Sound1");
+sound1.volume =0.15;
 
 //gif  пасхалка :)
 function imgChanger(id="",obychnyi="",neobychnyi=""){
