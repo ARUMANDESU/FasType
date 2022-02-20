@@ -1,4 +1,5 @@
 
+
 //start button pressed
 document.getElementById("startBtnToGenText").onclick=function() {startButton()};
 document.getElementById("myOwnTextBtn").onclick=function (){
@@ -146,9 +147,10 @@ function progress(firstText,secondText){
 
 
 //typing effect
-var i = 0;
-var txt = 'This web site will help you to increase your typing skills.';
-var speed = 30;
+let i = 0;
+let txt = 'This web site will help you to increase your typing skills.';
+let speed = 30;
+
 
 function typeWriter() {
     if (i < txt.length) {
@@ -156,21 +158,31 @@ function typeWriter() {
         i++;
         setTimeout(typeWriter, speed);
     }
+    else if(i>=txt.length){
+        document.getElementById("typingSound1").pause();
+    }
 }
 typeWriter();
 
 
+let sound1= document.getElementById("Sound1");
+
 //gif  пасхалка :)
 function imgChanger(id="",obychnyi="",neobychnyi=""){
     document.getElementById(id).onclick=function (){
+        sound1.currentTime = 3;
+        sound1.play();
         this.src="image/"+neobychnyi;
         if(this.parentElement.lastElementChild.innerHTML!="↓ ↑ ↑ → ← ← ↓ ↑ →"){ //
             this.parentElement.appendChild(document.createElement("div"));
             this.parentElement.lastElementChild.innerHTML="↓ ↑ ↑ → ← ← ↓ ↑ →";
         }
 
+
     };
     document.getElementById(id).onmouseleave=function (){
+        sound1.pause();
+        sound1.currentTime = 0
         this.src="image/"+obychnyi;
         if(this.parentElement.lastElementChild.innerHTML=="↓ ↑ ↑ → ← ← ↓ ↑ →") {
             this.parentElement.lastElementChild.remove();
