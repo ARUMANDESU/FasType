@@ -34,8 +34,8 @@ nav div{
 .navMenu{
     text-decoration: none;
     color: white;
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-right: 100px;
+    padding-left: 100px;
 }
 
 .navMenu:hover{
