@@ -49,6 +49,7 @@ function addText(text){
     someTexts.push(text);
 }
 
+
 // Highlighting text
 let inputText=document.getElementById("inputTextHere")
 inputText.oninput=function () {startTouchTyping()};
@@ -57,12 +58,20 @@ inputText.oninput=function () {startTouchTyping()};
 function startTouchTyping(){
     highlight($("#randomText"),$("#inputTextHere"));
     progress($("#randomText"),$("#inputTextHere"));
-    typingSpeed($("#inputTextHere"));
+
     afterInput();
-    if(parseInt($("#progress").text())>=100){
-        clearTimeout(t);
+    if(parseInt($("#progress").text())>=100){ //if finished
+        clearTimeout(t);//stop timer
         inputText.readOnly=true; // make it impossible to input
+        //completed sound
+        document.getElementById("completed").currentTime=0;
+        document.getElementById("completed").play();
+
     }
+}
+setInterval(everyHalfSecond,500);
+function everyHalfSecond(){
+    typingSpeed($("#inputTextHere"));
 }
 
 let after=true;
@@ -98,8 +107,6 @@ function highlight(firstText, secondText){
                 text += "<span class='highlightGreen'>"+val+"</span>";
             }
         }
-
-
     });
     firstText.html(text);
     wrongLetter=0;
@@ -216,3 +223,15 @@ document.onkeydown = function(e) {
         window.location.assign("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
     }
 };
+
+
+
+document.getElementById("arrowTop").onclick = function() {
+    window.scrollTo(pageXOffset, 0);
+    // после scrollTo возникнет событие "scroll", так что стрелка автоматически скроется
+};
+
+window.addEventListener('scroll', function() {
+    document.getElementById("arrowTop").hidden = (pageYOffset < document.documentElement.clientHeight);
+});
+

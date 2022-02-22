@@ -15,7 +15,6 @@ nav{
     background-color: #264653;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
-
     padding-top: 7px;
     padding-bottom: 10px;
     padding-right: 50px;
@@ -172,6 +171,21 @@ u{
 @keyframes example {
     from {opacity: 0.5;}
     to {opacity:1;}
+}
+
+#arrowTop {
+    height: 9px;
+    width: 14px;
+    color: #0ccb7e;
+    mix-blend-mode: difference;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+}
+
+#arrowTop::before {
+    content: '▲';
 }
 
 
