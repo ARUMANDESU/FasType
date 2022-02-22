@@ -165,9 +165,7 @@ function typeWriter() {
         i++;
         setTimeout(typeWriter, speed);
     }
-    else if(i>=txt.length){
-        document.getElementById("typingSound1").pause();
-    }
+
 }
 typeWriter();
 
