@@ -233,3 +233,8 @@ window.addEventListener('scroll', function() {
     document.getElementById("arrowTop").hidden = (pageYOffset < document.documentElement.clientHeight);
 });
 
+
+
+
+let a=document.getElementById("speed");
+a.dataset.dateOfSMTH='100';
