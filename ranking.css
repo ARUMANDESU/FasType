@@ -1,11 +1,11 @@
 body{
     margin: 0px;
     font-family: Inconsolata;
+    font-style: normal;
+    font-weight: normal;
     font-size: 30px;
-    color: #ffffff;
-}
-p{
-    margin: 0;
+    background-color: #264653;
+    color: white;
 }
 nav{
     background-color: #2A9D8F;
@@ -38,13 +38,25 @@ nav div{
     margin-top: 1px;
 }
 
-.mainSection{
-    background-color: #264653;
-    padding-bottom:15px;
-    padding-top: 150px;
+.table-striped {
+    padding: 16px;
+    color: white;
+    border-radius: 45px;
 }
 
-.sectionBorder {
-    margin-left: 330px;
-    margin-right: 330px;
+h1 {
+    margin: 0px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    color: #ffffff;
+}
+
+p1 {
+    font-size: 50px;
+    color: #2A9D8F;
+}
+
+class {
+    font-size: 20px;
 }
