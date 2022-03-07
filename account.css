@@ -1,0 +1,57 @@
+body{
+    margin: 0px;
+    font-family: Inconsolata;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    color: #ffffff;
+
+}
+p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+    color: #2A9D8F;
+}
+
+nav{
+    background-color: #264653;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+
+    display: flex;
+}
+.fa-keyboard:hover{
+    color: #2A9D8F;
+}
+
+nav div{
+    padding-top: 15px;
+}
+
+.navMenu{
+    text-decoration: none;
+    color: white;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.navMenu:hover{
+    text-decoration: none;
+    color: #2A9D8F;
+    margin-top: 1px;
+}
+
+.comments img{
+    width: 75px;
+    height: 75px;
+}

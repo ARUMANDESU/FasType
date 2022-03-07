@@ -226,7 +226,7 @@ document.onkeydown = function(e) {
 
 document.getElementById("arrowTop").onclick = function() {
     window.scrollTo(pageXOffset, 0);
-    // после scrollTo возникнет событие "scroll", так что стрелка автоматически скроется
+    // после scrollTo-> scroll: стрелка автоматически скроется
 };
 
 window.addEventListener('scroll', function() {
@@ -238,3 +238,4 @@ window.addEventListener('scroll', function() {
 
 let a=document.getElementById("speed");
 a.dataset.dateOfSMTH='100';
+
